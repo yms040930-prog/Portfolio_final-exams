@@ -1,3 +1,5 @@
+'use client'
+
 import { SignInButton, SignOutButton, SignedIn, SignedOut } from '@clerk/nextjs'
 import Link from 'next/link'
 import React from 'react'
@@ -5,7 +7,12 @@ import { FaLaptopCode } from 'react-icons/fa'
 
 export default function Header() {
   return (
-    <header>
+    <header
+      className="
+        fixed top-0 left-0 right-0 
+        z-[100]
+      "
+    >
       <nav className="bg-gradient-to-r from-green-600 to-teal-500 shadow-xl py-4 px-8">
         <div className="flex items-center justify-between container mx-auto">
           {/* 로고 + 슬로건 */}
@@ -24,7 +31,7 @@ export default function Header() {
             </div>
           </div>
 
-          {/* 내비게이션 & 로그인/로그아웃 */}
+          {/* 내비게이션 */}
           <div className="flex items-center font-semibold space-x-4">
             <Link
               href="/portfolio"

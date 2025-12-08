@@ -31,11 +31,9 @@ export default function RootLayout({
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           <Header />
-          <main className="min-h-screen">
-            <div className="container mx-auto px-4 pt-20">
-              <div className="max-w-2xl mx-auto">{children}</div>
-            </div>
-          </main>
+
+          {/* 🟢 여기: children을 직접 main에 배치 */}
+          <main className="min-h-screen pt-[80px]">{children}</main>
         </body>
       </html>
     </ClerkProvider>

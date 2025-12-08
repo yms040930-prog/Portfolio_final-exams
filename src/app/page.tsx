@@ -1,24 +1,15 @@
 import Link from 'next/link'
+import Hero from '@/components/Hero'
 
 export default function Home() {
   return (
-    <div className="relative w-full min-h-screen flex flex-col">
-      {/* 배경 이미지 */}
-      <div
-        className="absolute inset-0 bg-cover bg-center z-0"
-        style={{ backgroundImage: "url('/bg.jpg')" }}
-      ></div>
+    <Hero>
+      <h1 className="text-3xl mb-10 font-bold text-white text-center">
+        환영합니다! 포트폴리오 홈입니다.
+      </h1>
 
-      {/* 반투명 오버레이 */}
-      <div className="absolute inset-0 bg-black/20 z-0"></div>
-
-      {/* 콘텐츠 */}
-      <div className="relative z-10 flex-1 py-16 px-6 max-w-3xl mx-auto">
-        <h1 className="text-3xl mb-8 font-bold text-black text-center">
-          환영합니다! 포트폴리오 홈입니다.
-        </h1>
-
-        <div className="mb-6 bg-white/90 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+      <div className="space-y-6">
+        <div className="bg-white/90 p-6 rounded-xl shadow-lg hover:scale-105 transition">
           <Link
             href="https://blog.naver.com/hello_world-777"
             className="text-xl text-blue-700 font-bold hover:underline"
@@ -31,7 +22,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mb-6 bg-white/90 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+        <div className="bg-white/90 p-6 rounded-xl shadow-lg hover:scale-105 transition">
           <Link
             href="https://github.com/yms040930-prog"
             className="text-xl text-blue-700 font-bold hover:underline"
@@ -44,7 +35,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mb-6 bg-white/90 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+        <div className="bg-white/90 p-6 rounded-xl shadow-lg hover:scale-105 transition">
           <Link
             href="https://www.notion.so/41c31ae8e3d74650bc644647fdaac134"
             className="text-xl text-blue-700 font-bold hover:underline"
@@ -57,6 +48,6 @@ export default function Home() {
           </p>
         </div>
       </div>
-    </div>
+    </Hero>
   )
 }
