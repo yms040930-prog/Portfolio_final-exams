@@ -40,6 +40,14 @@ export default function Header() {
               Portfolio
             </Link>
 
+            {/* 🔥 팀소개 추가 */}
+            <Link
+              href="/team"
+              className="text-gray-200 hover:text-white transition-colors"
+            >
+              Team
+            </Link>
+
             <SignedIn>
               <SignOutButton>
                 <button className="bg-white text-green-600 px-4 py-1 rounded-lg shadow hover:bg-gray-100 transition-transform duration-300 hover:translate-y-[-2px]">
